@@ -1,0 +1,81 @@
+<style>
+  h1,
+  form,
+  .message,
+  .logout {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 90vw;
+  }
+
+  .logout {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  label,
+  button {
+    display: block;
+    font-size: 1rem;
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 0.15em;
+  }
+
+  label {
+    margin: 0.5rem 0 0;
+    text-transform: lowercase;
+  }
+
+  input {
+    border: 1px solid var(--text-muted);
+    border-radius: 0.25rem;
+    display: block;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  button {
+    background: var(--pink);
+    border: 0;
+    border-radius: 0.25rem;
+    color: var(--white);
+    font-family: var(--font-family);
+    margin: 1rem 0 0;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+  }
+
+  .message {
+    background: var(--yellow);
+    border-radius: 0.25rem;
+    font-family: monospace;
+    padding: 1rem;
+  }
+
+  .message:empty {
+    display: none;
+  }
+</style>
+
+<h1>Add an Appreciation</h1>
+
+<div class="message"></div>
+
+<form id="add-movie">
+  <label for="id">Id<input type="text" id="id" name="id" /></label>
+  <label for="what">What am I grateful about?<input type="text" id="what" name="what" /></label>
+  <label for="why">Why am I grateful?<input type="text" id="why" name="why"/></label>
+  <label for="express">How will I express my gratitude?<input type="text" id="express" name="express"/></label>
+  <label for="action">First action to take<input type="text" id="action" name="action"/></label>
+  <button type="submit">Add New Appreciation</button>
+</form>
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  async function handleSubmit(event) {
+    event.preventDefault()
+    const data = new FormData(event.target)
+  }
+</script>

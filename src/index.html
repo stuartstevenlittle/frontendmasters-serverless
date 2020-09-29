@@ -1,0 +1,10 @@
+<h1>Appreciations</h1>
+<!-- Implement add new appreciation -->
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  async function initialise() {
+    const appreciations = await fetch('/.netlify/functions/appreciations').then(response => response.json()) 
+    console.log(JSON.stringify(appreciations))
+  }
+  initialise()
+</script>
